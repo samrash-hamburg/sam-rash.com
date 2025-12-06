@@ -4,6 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
 
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
 @layer base {
   :root {
     --background: 220 15% 5%;
@@ -15,7 +17,7 @@
     --popover: 220 15% 8%;
     --popover-foreground: 210 20% 95%;
 
-    --primary: 190 100% 50%;
+    --primary: 192 91.3978% 36.4706%;
     --primary-foreground: 220 15% 5%;
 
     --secondary: 220 15% 12%;
@@ -24,7 +26,7 @@
     --muted: 220 15% 15%;
     --muted-foreground: 215 15% 55%;
 
-    --accent: 190 100% 50%;
+    --accent: 192 91.3978% 36.4706%;
     --accent-foreground: 220 15% 5%;
 
     --destructive: 0 84% 60%;
@@ -40,7 +42,7 @@
     --neon-blue: 190 100% 50%;
     --neon-glow: 0 0 20px hsl(190 100% 50% / 0.5), 0 0 40px hsl(190 100% 50% / 0.3);
     --neon-glow-strong: 0 0 30px hsl(190 100% 50% / 0.7), 0 0 60px hsl(190 100% 50% / 0.4), 0 0 100px hsl(190 100% 50% / 0.2);
-    
+
     --gradient-dark: linear-gradient(180deg, hsl(220 15% 5%) 0%, hsl(220 15% 8%) 100%);
     --gradient-card: linear-gradient(135deg, hsl(220 15% 10%) 0%, hsl(220 15% 6%) 100%);
     --gradient-neon: linear-gradient(135deg, hsl(190 100% 50%) 0%, hsl(200 100% 60%) 100%);
