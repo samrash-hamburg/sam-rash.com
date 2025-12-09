@@ -54,12 +54,12 @@ const MusicSection = () => {
                 scrolling="no"
                 frameBorder="no"
                 allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/2&color=%2300d4ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/samkharashfeh&color=%2300d4ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
               />
             </div>
             <Button variant="ghost" className="mt-4 text-muted-foreground" asChild>
               <a
-                href="https://soundcloud.com"
+                href="https://soundcloud.com/samkharashfeh"
                 target="_blank"
                 rel="noopener noreferrer"
               >
