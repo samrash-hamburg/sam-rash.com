@@ -55,7 +55,7 @@ const AboutSection = () => {
             {milestones.map((milestone, index) => <div key={milestone.title} className="bg-secondary/50 border border-border rounded-lg p-6 hover:border-primary/50 hover:shadow-[0_0_20px_hsl(190_100%_50%/0.2)] transition-all duration-300 group" style={{
             animationDelay: `${index * 0.1}s`
           }}>
-                <milestone.icon className="w-8 h-8 text-primary mb-4 group-hover:animate-glow-pulse bg-secondary border-[#be2727]" />
+                <milestone.icon className="w-8 h-8 text-primary mb-4 group-hover:animate-glow-pulse bg-secondary shadow-none opacity-0 border-primary" />
                 <h3 className="font-display text-2xl md:text-3xl text-foreground mb-1">
                   {milestone.title}
                 </h3>
