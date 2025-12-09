@@ -30,23 +30,12 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-4 text-foreground/70 leading-relaxed">
               <p>
-                Sam Kharashfeh is an internationally acclaimed DJ and electronic music
-                producer whose sonic journey blends the raw energy of underground techno
-                with the melodic beauty of progressive house.
+                Born in Hamburg with Jordan roots, he developed an early passion for electronic music. Active as a DJ since 2001, he has performed in various bars and clubs.
               </p>
               <p>
-                Born with an innate passion for electronic music, Sam has spent over a
-                decade crafting his unique sound—one that transcends borders and unites
-                dance floors across the globe. From the legendary clubs of Berlin to
-                the beaches of Ibiza, his sets are known for their hypnotic builds,
-                explosive drops, and seamless transitions.
+                 Since 2023, he has incorporated Arabic samples into his sets, giving his sound a unique and rich character. Musically, he navigates between classic house, techno, and indie dance, never hesitating to take risks and explore new sonic territories.  
               </p>
-              <p>
-                Influenced by pioneers like Sven Väth, Tale Of Us, and Amelie Lens,
-                Sam's style is characterized by driving basslines, ethereal synths, and
-                a deep connection to the crowd. Every performance is a journey—an
-                invitation to lose yourself in sound.
-              </p>
+              <p>His work is driven by the motto: "A day without music is a day wasted."</p>
             </div>
           </div>
 
