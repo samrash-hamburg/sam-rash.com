@@ -1,49 +1,42 @@
 import { Button } from "@/components/ui/button";
 import { Play, Calendar } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-
 const HeroSection = () => {
-  return (
-    <section
-      id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-    >
+  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      >
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url(${heroBg})`
+    }}>
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container-custom px-4 text-center">
-        <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-          <p className="text-primary text-sm md:text-base tracking-[0.3em] uppercase mb-4 text-glow">
+        <div className="animate-fade-in" style={{
+        animationDelay: "0.2s"
+      }}>
+          <p className="text-sm md:text-base tracking-[0.3em] uppercase mb-4 text-glow text-[#6db6c5]">
             Electronic Music Artist
           </p>
         </div>
 
-        <h1
-          className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-foreground mb-6 animate-fade-in"
-          style={{ animationDelay: "0.4s" }}
-        >
+        <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-foreground mb-6 animate-fade-in" style={{
+        animationDelay: "0.4s"
+      }}>
           SAM
           <br />
-          <span className="text-primary text-glow-strong">KHARASHFEH</span>
+          <span className="text-glow-strong text-[#6db6c5]">KHARASHFEH</span>
         </h1>
 
-        <p
-          className="text-lg md:text-xl text-foreground/70 mb-10 max-w-xl mx-auto animate-fade-in"
-          style={{ animationDelay: "0.6s" }}
-        >
+        <p className="text-lg md:text-xl text-foreground/70 mb-10 max-w-xl mx-auto animate-fade-in" style={{
+        animationDelay: "0.6s"
+      }}>
           Electronic Vibes. Global Energy.
         </p>
 
-        <div
-          className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in"
-          style={{ animationDelay: "0.8s" }}
-        >
+        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{
+        animationDelay: "0.8s"
+      }}>
           <Button variant="hero" size="xl" asChild>
             <a href="#contact">
               <Calendar className="mr-2" />
@@ -65,8 +58,6 @@ const HeroSection = () => {
           <div className="w-1 h-2 bg-primary rounded-full animate-bounce" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
