@@ -22,7 +22,7 @@ const MusicSection = () => {
             </h3>
             <div className="aspect-[4/3] rounded-lg overflow-hidden bg-secondary">
               <iframe
-                src="https://open.spotify.com/embed/artist/4NHQUGzhtTLFvgF5SZesLK?utm_source=generator&theme=0"
+                src="https://open.spotify.com/embed/user/samkharashfeh?utm_source=generator&theme=0"
                 width="100%"
                 height="100%"
                 frameBorder="0"
@@ -33,7 +33,7 @@ const MusicSection = () => {
             </div>
             <Button variant="ghost" className="mt-4 text-muted-foreground" asChild>
               <a
-                href="https://open.spotify.com"
+                href="https://open.spotify.com/user/samkharashfeh"
                 target="_blank"
                 rel="noopener noreferrer"
               >
