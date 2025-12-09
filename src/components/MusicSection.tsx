@@ -22,7 +22,7 @@ const MusicSection = () => {
             </h3>
             <div className="aspect-[4/3] rounded-lg overflow-hidden bg-secondary">
               <iframe
-                src="https://open.spotify.com/embed/user/samkharashfeh?utm_source=generator&theme=0"
+                src="https://open.spotify.com/user/samkharashfeh?si=sW3Vv833SwG8Lno7NWM-PrQ&nd=1&dlsi=42e7bf03350f4e31"
                 width="100%"
                 height="100%"
                 frameBorder="0"
