@@ -22,13 +22,8 @@ const HeroSection = () => {
 
         <h1 className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-foreground mb-6 animate-fade-in" style={{
         animationDelay: "0.4s"
-      }}>SΛM RΛSH
-
-
-
-
-RΛSH<br />
-          <span className="text-glow-strong text-[#6db6c5]">KHARASHFEH</span>
+      }}>SΛM RΛSH<br />
+          <span className="text-glow-strong text-[#6db6c5]"></span>
         </h1>
 
         <p className="text-lg md:text-xl text-foreground/70 mb-10 max-w-xl mx-auto animate-fade-in" style={{
