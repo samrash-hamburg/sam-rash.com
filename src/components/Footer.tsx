@@ -13,7 +13,7 @@ const Footer = () => {
               href="#home"
               className="font-display text-3xl text-primary text-glow tracking-wider"
             >
-              SAM KHARASHFEH
+              SΛM RΛSH
             </a>
           </div>
 
@@ -56,7 +56,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="mt-8 pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>© {currentYear} Sam Kharashfeh. All rights reserved.</p>
+          <p>© {currentYear} SΛM RΛSH. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-primary transition-colors">
               Impressum
