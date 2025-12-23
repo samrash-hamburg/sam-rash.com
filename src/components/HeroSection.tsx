@@ -38,7 +38,7 @@ const HeroSection = () => {
           <Button variant="hero" size="xl" asChild>
             <a href="#contact">
               <Calendar className="mr-2" />
-              Book Me
+              Book Sam
             </a>
           </Button>
           <Button variant="hero-outline" size="xl" asChild>
