@@ -74,31 +74,17 @@ const MusicSection = () => {
           <h3 className="font-display text-2xl text-foreground mb-4 flex items-center gap-2">
             <span className="text-[#FF0000]">●</span> YouTube - Live Sets & Videos
           </h3>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="aspect-video rounded-lg overflow-hidden bg-secondary">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Live Set"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="rounded-lg"
-              />
-            </div>
-            <div className="aspect-video rounded-lg overflow-hidden bg-secondary">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="DJ Set"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="rounded-lg"
-              />
-            </div>
+          <div className="aspect-video rounded-lg overflow-hidden bg-secondary max-w-3xl mx-auto">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/1GC27AipipE"
+              title="Live Set"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="rounded-lg"
+            />
           </div>
           <Button variant="ghost" className="mt-4 text-muted-foreground" asChild>
             <a
