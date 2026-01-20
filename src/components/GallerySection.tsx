@@ -1,36 +1,24 @@
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import gallery1 from "@/assets/gallery-1.jpeg";
+import gallery2 from "@/assets/gallery-2.jpeg";
+import gallery3 from "@/assets/gallery-3.jpeg";
 
 const galleryImages = [
   {
     id: 1,
-    url: "https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?w=800",
-    alt: "DJ Performance at Festival",
-  },
-  {
-    id: 2,
-    url: "https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=800",
-    alt: "Club Night Event",
-  },
-  {
-    id: 3,
-    url: "https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?w=800",
-    alt: "Behind the Decks",
-  },
-  {
-    id: 4,
-    url: "https://images.unsplash.com/photo-1508854710579-5cecc3a9ff17?w=800",
-    alt: "Festival Crowd",
-  },
-  {
-    id: 5,
-    url: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800",
+    url: gallery1,
     alt: "Studio Session",
   },
   {
-    id: 6,
-    url: "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=800",
-    alt: "Concert Lights",
+    id: 2,
+    url: gallery2,
+    alt: "Artist Portrait",
+  },
+  {
+    id: 3,
+    url: gallery3,
+    alt: "Behind the Decks",
   },
 ];
 
