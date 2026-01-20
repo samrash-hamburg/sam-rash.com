@@ -226,9 +226,9 @@ const ContactSection = () => {
                 and stage plot.
               </p>
               <Button variant="neon" asChild>
-                <a href="#" download>
+                <a href="/epk">
                   <Download className="mr-2 w-4 h-4" />
-                  Download EPK
+                  EPK ansehen
                 </a>
               </Button>
             </div>
