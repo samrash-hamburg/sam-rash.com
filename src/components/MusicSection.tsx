@@ -15,25 +15,17 @@ const MusicSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {/* Spotify Embed */}
+          {/* Spotify */}
           <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/30 transition-all duration-300">
             <h3 className="font-display text-2xl text-foreground mb-4 flex items-center gap-2">
               <span className="text-[#1DB954]">●</span> Spotify
             </h3>
-            <div className="aspect-[4/3] rounded-lg overflow-hidden bg-secondary">
-              <iframe
-                src="https://open.spotify.com/user/samkharashfeh?si=sW3Vv833SwG8Lno7NWM-PrQ&nd=1&dlsi=42e7bf03350f4e31"
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                className="rounded-lg"
-              />
-            </div>
+            <p className="text-muted-foreground">
+              Open Spotify to listen to the latest releases, playlists, and sets.
+            </p>
             <Button variant="ghost" className="mt-4 text-muted-foreground" asChild>
               <a
-                href="https://open.spotify.com/user/samkharashfeh"
+                href="https://open.spotify.com/playlist/2AYlkRaFHWHQnzevNTE20H?si=dLGEGraPSKunhYG9iXmgag"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -47,19 +39,14 @@ const MusicSection = () => {
             <h3 className="font-display text-2xl text-foreground mb-4 flex items-center gap-2">
               <span className="text-[#FF5500]">●</span> SoundCloud
             </h3>
-            <div className="aspect-[4/3] rounded-lg overflow-hidden bg-secondary">
-              <iframe
-                width="100%"
-                height="100%"
-                scrolling="no"
-                frameBorder="no"
-                allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/samkharashfeh&color=%2300d4ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-              />
+            <div className="rounded-lg overflow-hidden bg-secondary">
+
+              <iframe width="100%" height="300" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2262845267&color=%230890b2&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+              <div ><a href="https://soundcloud.com/samrash_official" title="SΛM RΛSH" target="_blank" >SΛM RΛSH</a> · <a href="https://soundcloud.com/samrash_official/deep-techno-journey-acid-dub" title="Deep Techno Journey – Acid, Dub &amp; Detroit Soul" target="_blank" >Deep Techno Journey – Acid, Dub &amp; Detroit Soul</a></div>
             </div>
             <Button variant="ghost" className="mt-4 text-muted-foreground" asChild>
               <a
-                href="https://soundcloud.com/samkharashfeh"
+                href="https://on.soundcloud.com/klIrqY6Psx2dLinBWE"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -11,47 +11,48 @@ import {
   Headphones
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SITE_CONTACT } from "@/content/site";
 
 const epkDownloads = [
   {
-    title: "Vollständiges EPK",
-    description: "Komplettes Press Kit mit Bio, Fotos, Tech Rider & Stage Plot",
+    title: "Complete EPK",
+    description: "Full press kit with bio, photos, tech rider & stage plot",
     icon: FileText,
     fileName: "SAM_RASH_EPK_Complete.zip",
     size: "45 MB",
     featured: true,
   },
   {
-    title: "Biografie",
-    description: "Kurz- und Langversion der Künstlerbiografie",
+    title: "Biography",
+    description: "Short and long artist biography",
     icon: FileText,
     fileName: "SAM_RASH_Biography.pdf",
     size: "2 MB",
   },
   {
-    title: "Pressefotos",
-    description: "Hochauflösende Fotos für Print und Web",
+    title: "Press Photos",
+    description: "High-resolution photos for print and web",
     icon: ImageIcon,
     fileName: "SAM_RASH_Press_Photos.zip",
     size: "25 MB",
   },
   {
     title: "Tech Rider",
-    description: "Technische Anforderungen und Equipment-Liste",
+    description: "Technical requirements and equipment list",
     icon: Settings,
     fileName: "SAM_RASH_Tech_Rider.pdf",
     size: "1.5 MB",
   },
   {
     title: "Stage Plot",
-    description: "Bühnenaufbau und DJ-Setup-Diagramm",
+    description: "Stage layout and DJ setup diagram",
     icon: MapPin,
     fileName: "SAM_RASH_Stage_Plot.pdf",
     size: "800 KB",
   },
   {
     title: "DJ Mix Demos",
-    description: "Ausgewählte DJ-Sets und Mixe als Audio-Dateien",
+    description: "Selected DJ sets and mixes as audio files",
     icon: Headphones,
     fileName: "SAM_RASH_DJ_Mixes.zip",
     size: "120 MB",
@@ -66,6 +67,9 @@ const artistStats = [
 ];
 
 const EPK = () => {
+  const mailto = `mailto:${SITE_CONTACT.email}?subject=${encodeURIComponent(
+    SITE_CONTACT.emailSubject
+  )}`;
   const handleDownload = (fileName: string) => {
     // In production, this would link to actual files
     // For now, we show a toast or trigger a download
@@ -85,7 +89,7 @@ const EPK = () => {
             className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
-            <span>Zurück zur Website</span>
+            <span>Back to website</span>
           </Link>
           <Link to="/" className="font-display text-2xl text-foreground">
             SΛM <span className="text-primary text-glow">RΛSH</span>
@@ -104,8 +108,8 @@ const EPK = () => {
               SΛM <span className="text-primary text-glow">RΛSH</span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Alles was Sie für Ihre Veranstaltung, Presseartikel oder Promotion benötigen. 
-              Laden Sie hochauflösende Materialien herunter.
+              Everything you need for your event, press, or promotion.
+              Download high-resolution materials.
             </p>
           </div>
 
@@ -164,7 +168,7 @@ const EPK = () => {
                       {item.description}
                     </p>
                     <p className="text-xs text-muted-foreground/60 mb-4">
-                      Dateigröße: {item.size}
+                      File size: {item.size}
                     </p>
                     
                     <Button
@@ -190,39 +194,39 @@ const EPK = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-primary text-sm tracking-[0.2em] uppercase mb-4">
-                Biografie
+                Biography
               </p>
               <h2 className="font-display text-3xl md:text-4xl text-foreground mb-6">
-                Über SΛM RΛSH
+                About SΛM RΛSH
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  SΛM RΛSH ist ein aufstrebender DJ und Produzent aus Deutschland, 
-                  der sich durch seinen einzigartigen Sound zwischen Deep House, 
-                  Melodic Techno und Progressive House auszeichnet.
+                  SΛM RΛSH is an up-and-coming DJ and producer based in Germany,
+                  known for a distinctive sound spanning Deep House, Melodic Techno,
+                  and Progressive House.
                 </p>
                 <p>
-                  Mit über 200 Live-Auftritten in 15 Ländern hat er sich einen Namen 
-                  in der elektronischen Musikszene gemacht. Seine energiegeladenen 
-                  Sets und melodischen Produktionen begeistern ein internationales Publikum.
+                  With 200+ live shows across 15+ countries, he has built a name in
+                  the electronic music scene. His high-energy sets and melodic
+                  productions resonate with an international audience.
                 </p>
                 <p>
-                  Für Booking-Anfragen, Interviews oder weitere Informationen 
-                  kontaktieren Sie uns gerne.
+                  For booking requests, interviews, or further information, feel free
+                  to get in touch.
                 </p>
               </div>
               
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button variant="neon" asChild>
-                  <Link to="/#contact">
+                  <a href={mailto}>
                     <Mail className="w-4 h-4 mr-2" />
-                    Booking Anfrage
-                  </Link>
+                    Booking request
+                  </a>
                 </Button>
                 <Button variant="outline" asChild>
                   <Link to="/#music">
                     <Music className="w-4 h-4 mr-2" />
-                    Musik hören
+                    Listen to music
                   </Link>
                 </Button>
               </div>
@@ -233,7 +237,7 @@ const EPK = () => {
                 <div className="w-full h-full flex items-center justify-center">
                   <div className="text-center">
                     <ImageIcon className="w-16 h-16 text-muted-foreground/30 mx-auto mb-4" />
-                    <p className="text-muted-foreground/50 text-sm">Pressefoto</p>
+                    <p className="text-muted-foreground/50 text-sm">Press photo</p>
                   </div>
                 </div>
               </div>
@@ -248,17 +252,17 @@ const EPK = () => {
       <section className="py-16 px-4 md:px-8 bg-card border-t border-border">
         <div className="container-custom text-center">
           <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
-            Fragen zum EPK?
+            Questions about the EPK?
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto mb-8">
-            Benötigen Sie spezielle Materialien oder haben Sie Fragen? 
-            Kontaktieren Sie uns für individuelle Anfragen.
+            Need specific assets or have questions?
+            Reach out for custom requests.
           </p>
           <Button variant="neon" size="lg" asChild>
-            <Link to="/#contact">
+            <a href={mailto}>
               <Mail className="w-5 h-5 mr-2" />
-              Kontakt aufnehmen
-            </Link>
+              Email me
+            </a>
           </Button>
         </div>
       </section>
@@ -267,7 +271,7 @@ const EPK = () => {
       <footer className="py-8 px-4 border-t border-border">
         <div className="container-custom text-center">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} SΛM RΛSH. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} SΛM RΛSH. All rights reserved.
           </p>
         </div>
       </footer>

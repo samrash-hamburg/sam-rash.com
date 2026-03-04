@@ -1,7 +1,11 @@
 import { Instagram, Facebook, Youtube, Music2 } from "lucide-react";
+import { SITE_CONTACT } from "@/content/site";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const mailto = `mailto:${SITE_CONTACT.email}?subject=${encodeURIComponent(
+    SITE_CONTACT.emailSubject
+  )}`;
 
   return (
     <footer className="bg-background border-t border-border py-12">
@@ -15,6 +19,14 @@ const Footer = () => {
             >
               SΛM RΛSH
             </a>
+            <div className="mt-2 text-sm text-muted-foreground">
+              <a
+                href={mailto}
+                className="hover:text-primary transition-colors"
+              >
+                {SITE_CONTACT.email}
+              </a>
+            </div>
           </div>
 
           {/* Social Icons */}
@@ -59,10 +71,10 @@ const Footer = () => {
           <p>© {currentYear} SΛM RΛSH. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-primary transition-colors">
-              Impressum
+              Imprint
             </a>
             <a href="#" className="hover:text-primary transition-colors">
-              Datenschutz
+              Privacy
             </a>
           </div>
         </div>

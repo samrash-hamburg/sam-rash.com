@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Play, Calendar } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import { SITE_CONTACT } from "@/content/site";
 const HeroSection = () => {
+  const mailto = `mailto:${SITE_CONTACT.email}?subject=${encodeURIComponent(
+    SITE_CONTACT.emailSubject
+  )}`;
   return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
@@ -36,13 +40,17 @@ const HeroSection = () => {
         animationDelay: "0.8s"
       }}>
           <Button variant="hero" size="xl" asChild>
-            <a href="#contact">
+            <a href={mailto}>
               <Calendar className="mr-2" />
-              Book Sam
+              Booking via Email
             </a>
           </Button>
           <Button variant="hero-outline" size="xl" asChild>
-            <a href="#music">
+            <a
+              href="https://soundcloud.com/samrash_official"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Play className="mr-2" />
               Listen Now
             </a>

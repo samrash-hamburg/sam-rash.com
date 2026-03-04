@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SITE_CONTACT } from "@/content/site";
 const navItems = [{
   label: "Home",
   href: "#home"
@@ -16,13 +17,13 @@ const navItems = [{
 }, {
   label: "Gallery",
   href: "#gallery"
-}, {
-  label: "Contact",
-  href: "#contact"
 }];
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const mailto = `mailto:${SITE_CONTACT.email}?subject=${encodeURIComponent(
+    SITE_CONTACT.emailSubject
+  )}`;
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -41,8 +42,8 @@ const Navigation = () => {
             {navItems.map(item => <a key={item.label} href={item.href} className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300 tracking-wide">
                 {item.label}
               </a>)}
-            <Button variant="neon" size="sm">
-              Book Me
+            <Button variant="neon" size="sm" asChild>
+              <a href={mailto}>Booking</a>
             </Button>
           </div>
 
@@ -58,8 +59,8 @@ const Navigation = () => {
               {navItems.map(item => <a key={item.label} href={item.href} className="text-base font-medium text-foreground/80 hover:text-primary transition-colors py-2" onClick={() => setIsMobileMenuOpen(false)}>
                   {item.label}
                 </a>)}
-              <Button variant="neon" className="mt-2">
-                Book Me
+              <Button variant="neon" className="mt-2" asChild>
+                <a href={mailto}>Booking</a>
               </Button>
             </div>
           </div>}
