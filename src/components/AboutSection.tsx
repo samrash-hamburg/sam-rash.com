@@ -1,21 +1,4 @@
-import { Music, Award, Globe, Disc3 } from "lucide-react";
-const milestones = [{
-  icon: Disc3,
-  title: "100+ Events",
-  description: "Worldwide performances"
-}, {
-  icon: Globe,
-  title: "20+ Countries",
-  description: "International tours"
-}, {
-  icon: Award,
-  title: "5 Awards",
-  description: "Industry recognition"
-}, {
-  icon: Music,
-  title: "50+ Releases",
-  description: "Original tracks & remixes"
-}];
+import samPortrait from "@/assets/sam-portrait.png";
 const AboutSection = () => {
   return <section id="about" className="section-padding bg-card">
       <div className="container-custom">
@@ -39,17 +22,16 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Milestones Grid */}
-          <div className="grid grid-cols-2 gap-4">
-            {milestones.map((milestone, index) => <div key={milestone.title} className="bg-secondary/50 border border-border rounded-lg p-6 hover:border-primary/50 hover:shadow-[0_0_20px_hsl(190_100%_50%/0.2)] transition-all duration-300 group" style={{
-            animationDelay: `${index * 0.1}s`
-          }}>
-                <milestone.icon className="w-8 h-8 text-primary mb-4 group-hover:animate-glow-pulse bg-secondary border-[#be2727]" />
-                <h3 className="font-display text-2xl md:text-3xl text-foreground mb-1">
-                  {milestone.title}
-                </h3>
-                <p className="text-muted-foreground text-sm">{milestone.description}</p>
-              </div>)}
+          {/* Portrait Image */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative max-w-sm w-full">
+              <div className="absolute inset-0 rounded-3xl bg-primary/20 blur-3xl -z-10" />
+              <img
+                src={samPortrait}
+                alt="Portrait of Sam Rash"
+                className="w-full h-auto rounded-3xl object-cover border border-border shadow-[0_0_40px_rgba(0,0,0,0.6)]"
+              />
+            </div>
           </div>
         </div>
       </div>
