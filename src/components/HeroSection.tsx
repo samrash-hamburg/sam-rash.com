@@ -1,13 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Play, Calendar } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-rooftop.webp";
+import { useLocale } from "@/lib/locale";
 const HeroSection = () => {
+  const locale = useLocale();
   return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      <div className="absolute inset-0 bg-cover bg-right md:bg-center bg-no-repeat" style={{
       backgroundImage: `url(${heroBg})`
     }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
+        <div className="absolute inset-0 bg-[#1c779f]/60 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-[#071d31]/35 to-background" />
       </div>
 
       {/* Content */}
@@ -15,8 +18,8 @@ const HeroSection = () => {
         <div className="animate-fade-in" style={{
         animationDelay: "0.2s"
       }}>
-          <p className="text-sm md:text-base tracking-[0.3em] uppercase mb-4 text-glow text-[#6db6c5]">
-            Electronic Music Artist
+          <p className="text-sm md:text-base tracking-[0.3em] uppercase mb-4 text-glow text-foreground/90">
+            {locale === "de" ? "Künstler für elektronische Musik" : "Electronic Music Artist"}
           </p>
         </div>
 
@@ -29,7 +32,7 @@ const HeroSection = () => {
         <p className="text-lg md:text-xl text-foreground/70 mb-10 max-w-xl mx-auto animate-fade-in" style={{
         animationDelay: "0.6s"
       }}>
-          Electronic Vibes. Global Energy.
+          {locale === "de" ? "Elektronische Vibes. Globale Energie." : "Electronic Vibes. Global Energy."}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{
@@ -38,13 +41,13 @@ const HeroSection = () => {
           <Button variant="hero" size="xl" asChild>
             <a href="#contact">
               <Calendar className="mr-2" />
-              Book Sam
+              {locale === "de" ? "Sam buchen" : "Book Sam"}
             </a>
           </Button>
           <Button variant="hero-outline" size="xl" asChild>
             <a href="#music">
               <Play className="mr-2" />
-              Listen Now
+              {locale === "de" ? "Jetzt hören" : "Listen Now"}
             </a>
           </Button>
         </div>
