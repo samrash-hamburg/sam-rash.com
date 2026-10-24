@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import PressKitButton from "@/components/PressKitButton";
-import heroPhoto from "@/assets/hero-rooftop.jpg";
+import heroPhoto from "@/assets/hero-rooftop.webp";
 import { artistProfile } from "@/lib/artist-profile";
 import { useLocale, useLocalizedPath } from "@/lib/locale";
 import { site } from "@/lib/site";
