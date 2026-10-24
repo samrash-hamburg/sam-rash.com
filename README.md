@@ -1,73 +1,48 @@
-# Welcome to your Lovable project
+# Sam-Rash Website
 
-## Project info
+Die Website von Sam-Rash basiert auf React, TypeScript, Vite und Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/d35a6b14-7bd0-4fac-ac92-44bca2fb8d47
+## Lokal starten
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/d35a6b14-7bd0-4fac-ac92-44bca2fb8d47) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Voraussetzung: Node.js und npm. Die aktuelle Einrichtung wurde mit Node.js 22 und npm 10 geprüft.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm ci
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Die Vorschau läuft unter [http://localhost:8080](http://localhost:8080). Änderungen im Quellcode erscheinen automatisch im Browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Sprachen
 
-**Use GitHub Codespaces**
+Deutsch ist die Standardsprache unter `/`, Englisch liegt unter `/en/`. Artist Profile, EPK, Impressum und Datenschutz sind ebenfalls unter beiden Sprachpfaden erreichbar. Die DE/EN-Umschaltung bleibt auf derselben Seite und übernimmt auf der Startseite den gewählten Abschnitt. Texte liegen direkt in den jeweiligen React-Komponenten; die Routen- und Sprachlogik liegt in `src/lib/locale.ts`. Der Build erzeugt für jede Unterseite eine eigene HTML-Datei mit passender Sprache und Seitenbeschreibung.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Die Booking-Adresse (`bookingEmail`) und die allgemeine Kontaktadresse (`email`) sind in `src/lib/site.ts` hinterlegt. Booking-Buttons öffnen das E-Mail-Programm mit einer vorausgefüllten Betreffzeile.
 
-## What technologies are used for this project?
+## Artist Profile und Pressekit pflegen
 
-This project is built with:
+Das Profil liegt unter `/artist-profile` und `/en/artist-profile`. Biografie-Absätze, Steckbrief und weitere Texte stehen für beide Sprachen zentral in `src/lib/artist-profile.ts`. Weitere Absätze können im Feld `biography` ergänzt werden.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Den Freigabelink zum Google-Drive-Pressekit in `src/lib/site.ts` unter `pressKitUrl` eintragen. Derselbe Link wird auf der Profilseite und im Footer verwendet. Solange das Feld leer ist, bleiben die Pressekit-Buttons mit dem Hinweis „Link folgt“ deaktiviert. Der Ordner sollte für die gewünschte Zielgruppe lesbar freigegeben sein.
 
-## How can I deploy this project?
+## Prüfen
 
-Simply open [Lovable](https://lovable.dev/projects/d35a6b14-7bd0-4fac-ac92-44bca2fb8d47) and click on Share -> Publish.
+```sh
+npm run build
+npm run lint
+npx tsc -b
+```
 
-## Can I connect a custom domain to my Lovable project?
+Der Build liegt anschließend im Ordner `dist/`. Die Lint-Prüfung hat derzeit nur Warnungen aus den vorhandenen UI-Komponenten.
 
-Yes, you can!
+## Wichtige Dateien
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- `src/pages/Index.tsx`: Startseite
+- `src/pages/ArtistProfile.tsx`: Artist Profile
+- `src/lib/artist-profile.ts`: bearbeitbare Profiltexte in DE und EN
+- `src/pages/EPK.tsx`: Electronic Press Kit
+- `src/components/`: Bereiche und gemeinsame UI-Komponenten
+- `src/assets/` und `public/`: Bilder und öffentliche Dateien
+- `src/index.css`: globale Gestaltung
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Das Git-Remote `origin` zeigt auf [samrash-hamburg/sam-rash.com](https://github.com/samrash-hamburg/sam-rash.com). Ein Push auf `main` startet den bestehenden GitHub-Pages-Workflow in `.github/workflows/deploy.yml`.

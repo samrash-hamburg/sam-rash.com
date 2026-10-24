@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -61,7 +62,7 @@ export default {
   		},
   		fontFamily: {
   			sans: [
-  				'Inter',
+				'ui-sans-serif',
   				'ui-sans-serif',
   				'system-ui',
   				'sans-serif',
@@ -71,7 +72,8 @@ export default {
   				'Noto Color Emoji'
   			],
   			display: [
-  				'Bebas Neue',
+				'Bebas Neue',
+				'Arial Narrow',
   				'sans-serif'
   			],
   			serif: [
@@ -193,5 +195,5 @@ export default {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 } satisfies Config;

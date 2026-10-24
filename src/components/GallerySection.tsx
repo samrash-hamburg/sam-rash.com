@@ -3,6 +3,7 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import gallery1 from "@/assets/gallery-1.jpeg";
 import gallery2 from "@/assets/gallery-2.jpeg";
 import gallery3 from "@/assets/gallery-3.jpeg";
+import { useLocale } from "@/lib/locale";
 
 const galleryImages = [
   {
@@ -23,6 +24,8 @@ const galleryImages = [
 ];
 
 const GallerySection = () => {
+  const locale = useLocale();
+  const imageAlt = locale === "de" ? ["Studioaufnahme", "Künstlerporträt", "Hinter den Decks"] : ["Studio session", "Artist portrait", "Behind the decks"];
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const openLightbox = (index: number) => setSelectedImage(index);
@@ -47,10 +50,10 @@ const GallerySection = () => {
       <div className="container-custom">
         <div className="text-center mb-12">
           <p className="text-primary text-sm tracking-[0.2em] uppercase mb-4">
-            Gallery
+            {locale === "de" ? "Galerie" : "Gallery"}
           </p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground">
-            Behind The <span className="text-primary text-glow">Scenes</span>
+            {locale === "de" ? "Hinter den " : "Behind The "}<span className="text-primary text-glow">{locale === "de" ? "Kulissen" : "Scenes"}</span>
           </h2>
         </div>
 
@@ -64,12 +67,12 @@ const GallerySection = () => {
             >
               <img
                 src={image.url}
-                alt={image.alt}
+                alt={imageAlt[index]}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="text-foreground font-display text-lg">View</span>
+                <span className="text-foreground font-display text-lg">{locale === "de" ? "Ansehen" : "View"}</span>
               </div>
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-2 border-primary rounded-lg shadow-[0_0_20px_hsl(190_100%_50%/0.4)]" />
             </button>
@@ -84,6 +87,7 @@ const GallerySection = () => {
           >
             <button
               className="absolute top-4 right-4 text-foreground/80 hover:text-primary p-2 transition-colors"
+              aria-label={locale === "de" ? "Bild schließen" : "Close image"}
               onClick={closeLightbox}
             >
               <X size={32} />
@@ -91,6 +95,7 @@ const GallerySection = () => {
 
             <button
               className="absolute left-4 text-foreground/80 hover:text-primary p-2 transition-colors"
+              aria-label={locale === "de" ? "Vorheriges Bild" : "Previous image"}
               onClick={(e) => {
                 e.stopPropagation();
                 goToPrevious();
@@ -101,13 +106,14 @@ const GallerySection = () => {
 
             <img
               src={galleryImages[selectedImage].url}
-              alt={galleryImages[selectedImage].alt}
+              alt={imageAlt[selectedImage]}
               className="max-w-full max-h-[80vh] object-contain rounded-lg neon-border"
               onClick={(e) => e.stopPropagation()}
             />
 
             <button
               className="absolute right-4 text-foreground/80 hover:text-primary p-2 transition-colors"
+              aria-label={locale === "de" ? "Nächstes Bild" : "Next image"}
               onClick={(e) => {
                 e.stopPropagation();
                 goToNext();
