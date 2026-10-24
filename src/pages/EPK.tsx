@@ -2,7 +2,7 @@ import { ArrowLeft, ArrowUpRight, Mail, Music2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
-import heroPhoto from "@/assets/hero-rooftop.jpg";
+import heroPhoto from "@/assets/hero-rooftop.webp";
 import { site } from "@/lib/site";
 import { useLocale, useLocalizedPath } from "@/lib/locale";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
