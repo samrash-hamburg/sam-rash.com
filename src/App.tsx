@@ -54,7 +54,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL === "/sam-rash.com/" ? "/sam-rash.com" : undefined}>
         <DocumentLanguage />
         <ScrollOnRouteChange />
         <Routes>
