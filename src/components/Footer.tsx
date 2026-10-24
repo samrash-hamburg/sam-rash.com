@@ -16,12 +16,12 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <div>
-            <a
-              href={`${path("/")}#home`}
+            <Link
+              to={`${path("/")}#home`}
               className="font-display text-3xl text-primary text-glow tracking-wider"
             >
               SΛM RΛSH
-            </a>
+            </Link>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
