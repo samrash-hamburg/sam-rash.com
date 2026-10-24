@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ExternalLink, Headphones, ShieldCheck, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { site } from "@/lib/site";
 import { useLocale, useLocalizedPath } from "@/lib/locale";
 
@@ -62,7 +63,7 @@ const MusicSection = () => {
               <a href={site.soundCloudTrack} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-primary hover:underline">
                 {locale === "de" ? "Auf SoundCloud öffnen" : "Open on SoundCloud"} <ExternalLink size={15} aria-hidden="true" />
               </a>
-              <a href={path("/datenschutz")} className="text-xs text-muted-foreground hover:text-primary">{locale === "de" ? "Datenschutzhinweise" : "Privacy information"}</a>
+              <Link to={path("/datenschutz")} className="text-xs text-muted-foreground hover:text-primary">{locale === "de" ? "Datenschutzhinweise" : "Privacy information"}</Link>
             </div>
           </div>
 
@@ -99,7 +100,7 @@ const MusicSection = () => {
               <a href={site.spotifyPlaylist} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-[#1DB954] hover:underline">
                 {locale === "de" ? "Playlist auf Spotify öffnen" : "Open playlist on Spotify"}<ExternalLink size={15} aria-hidden="true" />
               </a>
-              <a href={path("/datenschutz")} className="text-xs text-muted-foreground hover:text-primary">{locale === "de" ? "Datenschutzhinweise" : "Privacy information"}</a>
+              <Link to={path("/datenschutz")} className="text-xs text-muted-foreground hover:text-primary">{locale === "de" ? "Datenschutzhinweise" : "Privacy information"}</Link>
             </div>
           </div>
         </div>
